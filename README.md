@@ -11,11 +11,11 @@
    
 [03-Tool-Bar](./03-Tool-Bar)       
    
-[TODO:04-Status-Bar](./04-Status-Bar)      
+[04-Table-View](./04-Table-View)      
    
-[TODO:05-Navigation-Bar](./05-Navigation-Bar)      
+[05-Navigation-Bar](./05-Navigation-Bar)      
     
-[TODO:06-Tab-Bar](./06-Tab-Bar)      
+[06-Tab-Bar](./06-Tab-Bar)      
    
 [07-Image-View](./07-Image-View)     
    
