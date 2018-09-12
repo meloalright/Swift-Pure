@@ -33,7 +33,11 @@
 [S01-Button](./S01-Button)   
    
    
-> 如何删除 StoryBoard    
+   
+   
+   
+   
+## 如何删除 StoryBoard    
    
 `1.General => Main Interface 设置为空`   
    
@@ -43,6 +47,7 @@
    
 ```Objective-C
 // Objective-C
+// AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Override point for customization after application launch.
@@ -63,6 +68,7 @@
    
 ```Swift
 // Swift
+// AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
     // Override point for customization after application launch.
