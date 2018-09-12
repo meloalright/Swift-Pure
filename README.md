@@ -28,4 +28,25 @@
    
 ## Swift   
    
-[S00-Text-Field](./S00-Text-Field)   
+[S00-Text-Field](./S00-Text-Field)     
+   
+[S01-Button](./S01-Button)   
+   
+
+```Swift
+// 删除 StoryBoard 后需要的代码
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+    // Override point for customization after application launch.
+    
+    window = UIWindow(frame: UIScreen.main.bounds)
+    
+    window?.backgroundColor = UIColor.white
+    
+    window?.rootViewController = ViewController()
+    
+    window?.makeKeyAndVisible()
+    
+    return true
+}
+```
