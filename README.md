@@ -33,7 +33,7 @@
 [S01-Button](./S01-Button)   
    
    
-## 如何删除 StoryBoard    
+> 如何删除 StoryBoard    
    
 `1.General => Main Interface 设置为空`   
    
@@ -44,12 +44,19 @@
 ```Objective-C
 // Objective-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
     // Override point for customization after application launch.
+
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+
     ViewController *vc = [[ViewController alloc]init];
+
     [self.window setRootViewController:vc];
+
     self.window.backgroundColor = [UIColor whiteColor];
+
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 ```
