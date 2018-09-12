@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  00-Text-Field
 //
-//  Created by meloair on 2018/9/7.
-//  Copyright © 2018年 com. All rights reserved.
+//  Created by meloMacPro on 2018/9/12.
+//  Copyright © 2018年 meloMacPro. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    ViewController *vc = [[ViewController alloc]init];
+    [self.window setRootViewController:vc];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

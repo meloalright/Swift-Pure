@@ -32,7 +32,27 @@
    
 [S01-Button](./S01-Button)   
    
-
+   
+## 如何删除 StoryBoard    
+   
+`1.General => Main Interface 设置为空`   
+   
+`2.删除 Main.storyboard`   
+   
+`3.添加代码:`   
+   
+```Objective-C
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    ViewController *vc = [[ViewController alloc]init];
+    [self.window setRootViewController:vc];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+```
+   
 ```Swift
 // 删除 StoryBoard 后需要的代码
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
