@@ -42,6 +42,7 @@
 `3.添加代码:`   
    
 ```Objective-C
+// Objective-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
@@ -54,7 +55,7 @@
 ```
    
 ```Swift
-// 删除 StoryBoard 后需要的代码
+// Swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
     // Override point for customization after application launch.
