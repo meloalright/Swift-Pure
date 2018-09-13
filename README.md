@@ -43,11 +43,11 @@
    
 ## How to Delete StoryBoard    
    
-`1.General => Main Interface 设置为空`   
+`1.[General] => [Main Interface] empty 设置为空`   
    
-`2.删除 Main.storyboard`   
+`2.Delete Main.storyboard file 直接删除故事板`   
    
-`3.添加代码:`   
+`3.Add the Code 添加代码`   
    
 `AppDelegate.m`   
    
@@ -74,7 +74,7 @@
 }
 ```
       
-      
+
 `AppDelegate.swift`   
    
 ```Swift
