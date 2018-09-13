@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B692B71821425BC800515090 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B692B71721425BC800515090 /* AppDelegate.m */; };
 		B692B71B21425BC800515090 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B692B71A21425BC800515090 /* ViewController.m */; };
-		B692B71E21425BC800515090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B692B71C21425BC800515090 /* Main.storyboard */; };
 		B692B72021425BD100515090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B692B71F21425BD100515090 /* Assets.xcassets */; };
 		B692B72321425BD100515090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B692B72121425BD100515090 /* LaunchScreen.storyboard */; };
 		B692B72621425BD100515090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B692B72521425BD100515090 /* main.m */; };
@@ -21,7 +20,6 @@
 		B692B71721425BC800515090 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B692B71921425BC800515090 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B692B71A21425BC800515090 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B692B71D21425BC800515090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B692B71F21425BD100515090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B692B72221425BD100515090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B692B72421425BD100515090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 				B692B71721425BC800515090 /* AppDelegate.m */,
 				B692B71921425BC800515090 /* ViewController.h */,
 				B692B71A21425BC800515090 /* ViewController.m */,
-				B692B71C21425BC800515090 /* Main.storyboard */,
 				B692B71F21425BD100515090 /* Assets.xcassets */,
 				B692B72121425BD100515090 /* LaunchScreen.storyboard */,
 				B692B72421425BD100515090 /* Info.plist */,
@@ -130,7 +127,6 @@
 			files = (
 				B692B72321425BD100515090 /* LaunchScreen.storyboard in Resources */,
 				B692B72021425BD100515090 /* Assets.xcassets in Resources */,
-				B692B71E21425BC800515090 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +146,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B692B71C21425BC800515090 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B692B71D21425BC800515090 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B692B72121425BD100515090 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +272,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "01-Button/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +289,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "01-Button/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

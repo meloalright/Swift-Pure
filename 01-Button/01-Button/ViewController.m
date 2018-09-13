@@ -9,10 +9,87 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property(nonatomic, strong) UIButton *roundRectButton;
+@property(nonatomic, strong) UIButton *customButton;
+@property(nonatomic, strong) UIButton *detailDisclosureButton;
+@property(nonatomic, strong) UIButton *contactButton;
+@property(nonatomic, strong) UIButton *infoDarkButton;
+@property(nonatomic, strong) UIButton *infoLightButton;
 @end
 
 @implementation ViewController
+
+- (UIButton *)roundRectButton {
+    if (!_roundRectButton) {
+        _roundRectButton = [UIButton buttonWithType:
+                            UIButtonTypeRoundedRect];
+        // @@ 实现居中
+        // @@ 使用 (self.view.frame.size.width - 200)/2.0 设定左边距 即可居中
+        [_roundRectButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 60, 200, 40)];
+        // sets title for the button
+        [_roundRectButton setTitle:@"Rounded Rect Button" forState:
+         UIControlStateNormal];
+    }
+    return _roundRectButton;
+}
+
+- (UIButton *)customButton {
+    if (!_customButton) {
+        _customButton = [UIButton buttonWithType: UIButtonTypeCustom];
+        [_customButton setBackgroundColor: [UIColor lightGrayColor]];
+        [_customButton setTitleColor:[UIColor blackColor] forState:
+         UIControlStateHighlighted];
+        //sets background image for normal state
+        [_customButton setBackgroundImage:[UIImage imageNamed:
+                                           @"Button_Default.png"]
+                                 forState:UIControlStateNormal];
+        //sets background image for highlighted state
+        [_customButton setBackgroundImage:[UIImage imageNamed:
+                                           @"Button_Highlighted.png"]
+                                 forState:UIControlStateHighlighted];
+        [_customButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 100, 200, 40)];
+        [_customButton setTitle:@"Custom Button" forState:UIControlStateNormal];
+    }
+    return _customButton;
+}
+
+- (UIButton *)detailDisclosureButton {
+    if (!_detailDisclosureButton) {
+        _detailDisclosureButton = [UIButton buttonWithType:
+                                            UIButtonTypeDetailDisclosure];
+        [_detailDisclosureButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 150, 200, 40)];
+        [_detailDisclosureButton setTitle:@"Detail disclosure" forState:
+         UIControlStateNormal];
+    }
+    return _detailDisclosureButton;
+}
+
+- (UIButton *)contactButton {
+    if (_contactButton) {
+        _contactButton = [UIButton buttonWithType:
+                          UIButtonTypeContactAdd];
+        [_contactButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 200, 200, 40)];
+    }
+    return _contactButton;
+}
+
+- (UIButton *)infoDarkButton {
+    if (!_infoDarkButton) {
+        _infoDarkButton = [UIButton buttonWithType:
+                                    UIButtonTypeInfoDark];
+        [_infoDarkButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 250, 200, 40)];
+    }
+    return _infoDarkButton;
+}
+
+- (UIButton *)infoLightButton {
+    if (!_infoLightButton) {
+        _infoLightButton = [UIButton buttonWithType:
+                                     UIButtonTypeInfoLight];
+        [_infoLightButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 300, 200, 40)];
+    }
+    return _infoLightButton;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,54 +105,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 -(void)addDifferentTypesOfButton {
-    // A rounded Rect button created by using class method
-    UIButton *roundRectButton = [UIButton buttonWithType:
-                                 UIButtonTypeRoundedRect];
-    // @@ 实现居中
-    // @@ 使用 (self.view.frame.size.width - 200)/2.0 设定左边距 即可居中
-    [roundRectButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 60, 200, 40)];
-    // sets title for the button
-    [roundRectButton setTitle:@"Rounded Rect Button" forState:
-     UIControlStateNormal];
-    [self.view addSubview:roundRectButton];
+    [self.view addSubview:self.roundRectButton];
+
+    [self.view addSubview:self.customButton];
     
-    UIButton *customButton = [UIButton buttonWithType: UIButtonTypeCustom];
-    [customButton setBackgroundColor: [UIColor lightGrayColor]];
-    [customButton setTitleColor:[UIColor blackColor] forState:
-     UIControlStateHighlighted];
-    //sets background image for normal state
-    [customButton setBackgroundImage:[UIImage imageNamed:
-                                      @"Button_Default.png"]
-                            forState:UIControlStateNormal];
-    //sets background image for highlighted state
-    [customButton setBackgroundImage:[UIImage imageNamed:
-                                      @"Button_Highlighted.png"]
-                            forState:UIControlStateHighlighted];
-    [customButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 100, 200, 40)];
-    [customButton setTitle:@"Custom Button" forState:UIControlStateNormal];
-    [self.view addSubview:customButton];
+
+    [self.view addSubview:self.detailDisclosureButton];
     
-    UIButton *detailDisclosureButton = [UIButton buttonWithType:
-                                        UIButtonTypeDetailDisclosure];
-    [detailDisclosureButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 150, 200, 40)];
-    [detailDisclosureButton setTitle:@"Detail disclosure" forState:
-     UIControlStateNormal];
-    [self.view addSubview:detailDisclosureButton];
+
+    [self.view addSubview:self.contactButton];
     
-    UIButton *contactButton = [UIButton buttonWithType:
-                               UIButtonTypeContactAdd];
-    [contactButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 200, 200, 40)];
-    [self.view addSubview:contactButton];
+
+    [self.view addSubview:self.infoDarkButton];
     
-    UIButton *infoDarkButton = [UIButton buttonWithType:
-                                UIButtonTypeInfoDark];
-    [infoDarkButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 250, 200, 40)];
-    [self.view addSubview:infoDarkButton];
-    
-    UIButton *infoLightButton = [UIButton buttonWithType:
-                                 UIButtonTypeInfoLight];
-    [infoLightButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 300, 200, 40)];
-    [self.view addSubview:infoLightButton];
+
+    [self.view addSubview:self.infoLightButton];
 }
 @end
