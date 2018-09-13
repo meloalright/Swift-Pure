@@ -9,15 +9,25 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property(nonatomic, strong) UIAlertView *alertView;
 @end
 
 @implementation ViewController
 
+- (UIAlertView *) alertView {
+    if (!_alertView) {
+        _alertView = [[UIAlertView alloc]initWithTitle:
+                      @"Title" message:@"This is a test alert" delegate:self
+                                     cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    }
+    return _alertView;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self addAlertView];
+    [self.alertView show];
 }
 
 
@@ -26,12 +36,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)addAlertView{
-    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:
-                              @"Title" message:@"This is a test alert" delegate:self
-                                             cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
-    [alertView show];
-}
 
 #pragma mark - Alert view delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:
