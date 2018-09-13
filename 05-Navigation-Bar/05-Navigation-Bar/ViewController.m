@@ -9,10 +9,23 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property(nonatomic, strong) UIButton *button;
 @end
 
 @implementation ViewController
+
+- (UIButton *) button {
+    if (!_button) {
+        _button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [_button setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 60, 200, 40)];
+        // sets title for the button
+        [_button setTitle:@"Navigate To Next View" forState:
+         UIControlStateNormal];
+        [_button addTarget:self action:@selector(onTouchHandler:)
+          forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _button;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,15 +40,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addButton {
-    UIButton *roundRectButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [roundRectButton setFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 60, 200, 40)];
-    // sets title for the button
-    [roundRectButton setTitle:@"Navigate To Next View" forState:
-     UIControlStateNormal];
-    [roundRectButton addTarget:self action:@selector(onTouchHandler:)
-     forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:roundRectButton];
+- (void)addButton {;
+    [self.view addSubview:self.button];
 }
 
 

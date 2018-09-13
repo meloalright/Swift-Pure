@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B6F896C221466737003EDAC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F896C121466737003EDAC3 /* AppDelegate.m */; };
 		B6F896C521466737003EDAC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F896C421466737003EDAC3 /* ViewController.m */; };
-		B6F896C821466737003EDAC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F896C621466737003EDAC3 /* Main.storyboard */; };
 		B6F896CA2146673D003EDAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6F896C92146673D003EDAC3 /* Assets.xcassets */; };
 		B6F896CD2146673D003EDAC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6F896CB2146673D003EDAC3 /* LaunchScreen.storyboard */; };
 		B6F896D02146673D003EDAC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F896CF2146673D003EDAC3 /* main.m */; };
@@ -21,7 +20,6 @@
 		B6F896C121466737003EDAC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B6F896C321466737003EDAC3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B6F896C421466737003EDAC3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		B6F896C721466737003EDAC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6F896C92146673D003EDAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6F896CC2146673D003EDAC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6F896CE2146673D003EDAC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 				B6F896C121466737003EDAC3 /* AppDelegate.m */,
 				B6F896C321466737003EDAC3 /* ViewController.h */,
 				B6F896C421466737003EDAC3 /* ViewController.m */,
-				B6F896C621466737003EDAC3 /* Main.storyboard */,
 				B6F896C92146673D003EDAC3 /* Assets.xcassets */,
 				B6F896CB2146673D003EDAC3 /* LaunchScreen.storyboard */,
 				B6F896CE2146673D003EDAC3 /* Info.plist */,
@@ -130,7 +127,6 @@
 			files = (
 				B6F896CD2146673D003EDAC3 /* LaunchScreen.storyboard in Resources */,
 				B6F896CA2146673D003EDAC3 /* Assets.xcassets in Resources */,
-				B6F896C821466737003EDAC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +146,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B6F896C621466737003EDAC3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B6F896C721466737003EDAC3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B6F896CB2146673D003EDAC3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -9,15 +9,25 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property(nonatomic, strong) UISlider *sld;
 @end
 
 @implementation ViewController
 
+- (UISlider *) sld {
+    if (!_sld) {
+        _sld = [[UISlider alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 200, 200, 23)];
+        _sld.minimumValue = 10.0;
+        _sld.maximumValue = 99.0;
+        _sld.continuous = NO;
+    }
+    return _sld;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self addSlider];
+    [self.view addSubview:self.sld];
 }
 
 
@@ -26,12 +36,5 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)addSlider{
-    UISlider *mySlider = [[UISlider alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 200, 200, 23)];
-    [self.view addSubview:mySlider];
-    mySlider.minimumValue = 10.0;
-    mySlider.maximumValue = 99.0;
-    mySlider.continuous = NO;
-}
 
 @end

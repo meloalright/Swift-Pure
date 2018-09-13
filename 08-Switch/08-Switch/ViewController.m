@@ -9,15 +9,23 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property(nonatomic, strong) UISwitch *sw;
 @end
 
 @implementation ViewController
 
+- (UISwitch *) sw {
+    if (!_sw) {
+        _sw = [[UISwitch alloc] init];
+        _sw.center = CGPointMake(40, 40);
+    }
+    return _sw;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self addSwitch];
+    [self.view addSubview:self.sw];
 }
 
 
@@ -25,11 +33,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
--(void)addSwitch{
-    UISwitch *mySwitch = [[UISwitch alloc] init];
-    [self.view addSubview:mySwitch];
-    mySwitch.center = CGPointMake(40, 40);
-}
-
 @end

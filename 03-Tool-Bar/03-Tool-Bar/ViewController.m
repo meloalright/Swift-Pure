@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 @property (strong, nonatomic)  UILabel *label;
+@property (strong, nonatomic)  UIToolbar *toolBar;
+
 @end
 
 @implementation ViewController
@@ -26,6 +28,27 @@
     return _label;
 }
 
+- (UIToolbar *) toolBar {
+    if (!_toolBar) {
+        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc]
+                                      initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
+                                      target:nil action:nil];
+        UIBarButtonItem *customItem1 = [[UIBarButtonItem alloc]
+                                        initWithTitle:@"Tool1" style:UIBarButtonItemStyleBordered
+                                        target:self action:@selector(toolBarItem1:)];
+        UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
+                                        initWithTitle:@"Tool2" style:UIBarButtonItemStyleDone
+                                        target:self action:@selector(toolBarItem2:)];
+        NSArray *toolbarItems = [NSArray arrayWithObjects:
+                                 customItem1,spaceItem, customItem2, nil];
+        _toolBar = [[UIToolbar alloc]initWithFrame:
+                              CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
+        [_toolBar setBarStyle:UIBarStyleBlackOpaque];
+        
+        [_toolBar setItems:toolbarItems];
+    }
+    return _toolBar;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,7 +60,7 @@
     //self.label.frame = CGRectMake(100, 100, 200, 50);
     
     // Add ToolBar
-    [self addToolbar];
+    [self.view addSubview:self.toolBar];
 
 }
 
@@ -45,26 +68,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)addToolbar
-{
-    UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc]
-                                  initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-                                  target:nil action:nil];
-    UIBarButtonItem *customItem1 = [[UIBarButtonItem alloc]
-                                    initWithTitle:@"Tool1" style:UIBarButtonItemStyleBordered
-                                    target:self action:@selector(toolBarItem1:)];
-    UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
-                                    initWithTitle:@"Tool2" style:UIBarButtonItemStyleDone
-                                    target:self action:@selector(toolBarItem2:)];
-    NSArray *toolbarItems = [NSArray arrayWithObjects:
-                             customItem1,spaceItem, customItem2, nil];
-    UIToolbar *toolbar = [[UIToolbar alloc]initWithFrame:
-                          CGRectMake(0, self.view.frame.size.height - 50, self.view.frame.size.width, 50)];
-    [toolbar setBarStyle:UIBarStyleBlackOpaque];
-    [self.view addSubview:toolbar];
-    [toolbar setItems:toolbarItems];
 }
 
 -(IBAction)toolBarItem1:(id)sender{
