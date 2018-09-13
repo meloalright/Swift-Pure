@@ -41,7 +41,7 @@
    
    
    
-## 如何删除 StoryBoard    
+## How to Delete StoryBoard    
    
 `1.General => Main Interface 设置为空`   
    
@@ -49,9 +49,13 @@
    
 `3.添加代码:`   
    
+`AppDelegate.m`   
+   
 ```Objective-C
-// Objective-C
-// AppDelegate.m
+#import "ViewController.h"
+```   
+   
+```Objective-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Override point for customization after application launch.
@@ -69,9 +73,11 @@
     return YES;
 }
 ```
+      
+      
+`AppDelegate.swift`   
    
 ```Swift
-// Swift
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
