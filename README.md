@@ -40,6 +40,8 @@
    
 [S05-Navigation-Bar](./S05-Navigation-Bar/S05-Navigation-Bar)      
    
+[S06-Tab-Bar](./S06-Tab-Bar/S06-Tab-Bar)      
+   
    
    
    
