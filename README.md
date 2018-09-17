@@ -36,6 +36,10 @@
    
 [S03-Tool-Bar](./S03-Tool-Bar/S03-Tool-Bar)      
    
+[S04-Table-View](./S04-Table-View/S04-Table-View)      
+   
+[S05-Navigation-Bar](./S05-Navigation-Bar/S05-Navigation-Bar)      
+   
    
    
    
