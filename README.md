@@ -42,6 +42,14 @@
    
 [S06-Tab-Bar](./S06-Tab-Bar/S06-Tab-Bar)      
    
+[S07-Image-View](./S07-Image-View/S07-Image-View)      
+   
+[S08-Switch](./S08-Switch/S08-Switch)      
+   
+[S09-Slider](./S09-Slider/S09-Slider)      
+   
+[S10-Alert](./S10-Alert/S10-Alert)      
+   
    
    
    
@@ -49,11 +57,11 @@
    
 ## How to Delete StoryBoard    
    
-`1.[General] => [Main Interface] empty 设置为空`   
+`1.[General] => [Main Interface] 设置为空`   
    
-`2.Delete Main.storyboard file 直接删除故事板`   
+`2.删除 Main.storyboard`   
    
-`3.Add the Code 添加代码`   
+`3.添加代码`   
    
 `AppDelegate.m`   
    

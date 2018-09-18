@@ -20,7 +20,6 @@
         _imgview0 = [[UIImageView alloc]
                                 initWithFrame:CGRectMake((self.view.frame.size.width - 100)/2.0, 50, 100, 100)];
         [_imgview0 setImage:[UIImage imageNamed:@"A0.jpg"]];
-        [_imgview0 setContentMode:UIViewContentModeScaleAspectFit];
     }
     return _imgview0;
 }
@@ -34,7 +33,6 @@
                                    [UIImage imageNamed:@"A0.jpg"],
                                    [UIImage imageNamed:@"A1.jpg"], nil];
         _imgview1.animationDuration = 4.0;
-        _imgview1.contentMode = UIViewContentModeCenter;
         [_imgview1 startAnimating];
     }
     return _imgview1;
